@@ -7,16 +7,16 @@ public class GenericsKbAVLApp {
     public static void main(String[] args) {
         AVLTree<Statement> avlTree = new AVLTree<>();
         loadDataset(avlTree, "GenericsKB.txt");
-        // printLoadedStatements(avlTree);
         performQueries(avlTree, "GenericsKB-queries.txt");
     }
-
+    
     private static void printLoadedStatements(AVLTree<Statement> avlTree) {
+        System.out.println("Show");
         System.out.println("Loaded Statements:");
         avlTree.treeOrder();
         System.out.println();
     }
-
+    
     private static void loadDataset(AVLTree<Statement> avlTree, String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -24,6 +24,7 @@ public class GenericsKbAVLApp {
                 processLine(line, avlTree);
             }
             System.out.println("Dataset loaded successfully.");
+            printLoadedStatements(avlTree);
         } catch (IOException e) {
             e.printStackTrace();
         }
