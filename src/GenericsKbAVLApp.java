@@ -7,7 +7,7 @@ public class GenericsKbAVLApp {
     public static void main(String[] args) {
         AVLTree<Statement> avlTree = new AVLTree<>();
         loadDataset(avlTree, "GenericsKB.txt");
-        performQueries(avlTree, "GenericsKB_queries.txt");
+        performQueries(avlTree, "GenericsKB-queries.txt");
     }
 
     private static void loadDataset(AVLTree<Statement> avlTree, String filename) {
@@ -15,6 +15,10 @@ public class GenericsKbAVLApp {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(":");
+                if (parts.length < 3) {
+                    System.err.println("Invalid line: " + line);
+                    continue;
+                }
                 String term = parts[0].trim();
                 String sentence = parts[1].trim();
                 double confidenceScore = Double.parseDouble(parts[2].trim());
@@ -25,6 +29,7 @@ public class GenericsKbAVLApp {
             e.printStackTrace();
         }
     }
+    
 
     private static void performQueries(AVLTree<Statement> avlTree, String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {

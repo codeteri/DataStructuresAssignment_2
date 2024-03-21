@@ -49997,4 +49997,4 @@ carob bean	A carob bean is a bean	1.0
 protein toxin	Protein toxins cause illnesses.	1.0
 true fungus	True fungi have no flagellated stages in their life cycle.	0.771081268787384
 complete blood count test	Complete blood count tests measure blood.	1.0
-insurance broker	An insurance broker is a broker	1.0
+insurance broker	An insurance broker is a broker.	1.0
