@@ -1,0 +1,100 @@
+parody	A parody is impersonation	1.0
+snap roll	Snap roll is roll	1.0
+apoptotic chromatin	Apoptotic chromatin favours aggregation and fluorescence quenching of DNA dyes.	0.7543678283691406
+pedal pusher	A pedal pusher is a trouser	1.0
+religious belief	Religious beliefs are accidents of birth.	0.721881091594696
+interdisciplinary background	Interdisciplinary backgrounds provide expertise.	1.0
+phimosis	Phimosises are abnormalities.	1.0
+goony	A goony is an oceanic bird	1.0
+diurnal animal	Diurnal animals are active during the day.	0.8286927938461304
+earpiece	An earpiece is a transducer	1.0
+tesseract	A tesseract is a cube	1.0
+airborne dust particle	Airborne dust particles reflect sunlight.	1.0
+snow plow	Snow plows begin when snow exceeds two inches.	0.7166318297386169
+Fresno	Fresno isa thing.	1.0
+radio beacon	A radio beacon is a radio station	1.0
+musk lorikeet	Musk lorikeets raise babies.	1.0
+airplane pilot	An airplane pilot is a flyer	1.0
+side arm	A side arm is a firearm	1.0
+puma	Pumas are wild cats.	1.0
+lethal concentration	Lethal concentration is taken into the body through inhalation of airborne toxic chemicals.	0.7458922863006592
+guanine	Guanine isa alkali.	1.0
+amber	Amber is colour.	1.0
+communicable disease	Communicable diseases are diseases.	1.0
+baby rattlesnake	Baby rattlesnakes have short fangs.	1.0
+approval	Approval is acceptance.	1.0
+different approach	Different approaches yield results.	1.0
+legion	Legion is military units.	1.0
+bamboo fibre	Bamboo fibre has surfaces.	1.0
+severance	Severances are cuts.	1.0
+zephyr	A zephyr is wind	1.0
+orca whale	Orca whales are the largest members of the dolphin family.	0.7189847230911255
+hairnet	A hairnet is a network	1.0
+revers	A revers is a lapel	1.0
+intense inflammation	Intense inflammation occurs at sites.	1.0
+saguaro	Saguaros bloom in summer.	1.0
+beeper	A beeper is an electronic device	1.0
+clinical oncologist	Clinical oncologists are the physicians who treat people with cancer.	0.7058072686195374
+recent drought	Recent drought affects trees.	1.0
+Dysgraphia	Dysgraphia is a writing disorder.	0.707378089427948
+frat	A frat is a club	1.0
+chemical factory	Chemical factories perform follow functions.	1.0
+actual phenomenon	Actual phenomena occur during seasons.	1.0
+chemical test	Chemical tests to measure levels.	1.0
+whisper	Whispers are speaking.	1.0
+hot line	A hot line is a line	1.0
+internal resistance	Internal resistance has effects.	1.0
+maser	A maser is an amplifier	1.0
+epidemiology	Epidemiology is the study of the frequency and distribution of diseases within human populations.	0.7591486573219299
+haversack	A haversack is a bag	1.0
+several committee member	Several committee members review issues.	1.0
+sojourner	Sojourners are residents.	1.0
+propitiation	A propitiation is calming	1.0
+golden jackal	Golden jackals inhabit areas.	1.0
+bustard	A bustard is a wader	1.0
+capote	A capote is a coat	1.0
+research effort	Research effort provides advantage.	1.0
+elephant ivory	Elephant ivory is a unique mixture of dentine, cartilaginous material and calcium salts.	0.7262577414512634
+teleportation	Teleportations are transportation.	1.0
+obstruent	An obstruent is a consonant	1.0
+potassium fluoride	Potassium fluoride is a colorless crystalline solid.	0.8203704953193665
+christian missionary	Christian missionaries are workers.	1.0
+torturer	A torturer is an oppressor	1.0
+selenous acid	Selenous acid is a weak acid .	0.8316563963890076
+million	A million is a large integer	1.0
+quackgrass	Quackgrass is a strongly rhizomatous, sod-forming, perennial grass.	0.7912503480911255
+delft	A delft is earthenware	1.0
+insomnia	An insomnia is sleep disorder	1.0
+traditional cosmetic	Traditional cosmetics contain ingredients that can suffocate or harm the skin.	0.7048354744911194
+electoral system	An electoral system is a legal system	1.0
+tomahawk	A tomahawk is a weapon	1.0
+large trout	Large trouts have different food habits.	1.0
+sustainable agriculture	Sustainable agriculture benefits small farmers.	1.0
+panic	Panic causes panic.	1.0
+flat file	A flat file is a file	1.0
+financial officer	A financial officer is a person	1.0
+large bubble	Large bubbles contain gases.	1.0
+early blight	Early blight is caused by the fungus Alternaria solani.	0.7316881418228149
+counterpoint	A counterpoint is music	1.0
+staghorn coral	A staghorn coral is a coral	1.0
+paperhanger	Paperhangers are craftsmans.	1.0
+vegetable juice	Vegetable juice has properties.	1.0
+console	Consoles are computers.	1.0
+bile duct	Bile ducts carry bile to the gall bladder for temporary storage.	0.7991958260536194
+utilitarianism	Utilitarianisms are doctrines.	1.0
+selfishness	Selfishness is stinginess	1.0
+ammoniacal nitrogen	Ammoniacal nitrogen includes all the ammonium forms of nitrogen in the fertilizer.	0.8034905195236206
+talisman	A talisman is charm	1.0
+bishop	A bishop is a priest	1.0
+exfoliation	Exfoliation occurs when deeply-buried rock is exposed at the earth's surface by erosion.	0.7697212100028992
+hydrochlorothiazide	Hydrochlorothiazide is slightly soluble in water.	0.8257253170013428
+enteroviral myocarditis	Enteroviral myocarditis is a relatively benign condition in adults.	0.7003096342086792
+distress	Distress is adversity.	1.0
+replay	Replay is repetition	1.0
+cream stripe	Cream stripes run from snouts.	1.0
+dominant predator	Dominant predators live in oceans.	1.0
+beanie baby	Beanie babies are located in toy stores.	1.0
+film speed	Film speed is the level of sensitivity that the film has to light.	0.7202287912368774
+soybean lecithin	Soybean lecithin increases dietary choline via high levels of phospatidylcholine.	0.7780467867851257
+blastocyst	Blastocysts have (part) cells.	1.0
+viable pollen grain	Viable pollen grain is produced by plants.	1.0

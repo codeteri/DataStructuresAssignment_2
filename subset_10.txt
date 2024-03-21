@@ -1,0 +1,10 @@
+parody	A parody is impersonation	1.0
+snap roll	Snap roll is roll	1.0
+apoptotic chromatin	Apoptotic chromatin favours aggregation and fluorescence quenching of DNA dyes.	0.7543678283691406
+pedal pusher	A pedal pusher is a trouser	1.0
+religious belief	Religious beliefs are accidents of birth.	0.721881091594696
+interdisciplinary background	Interdisciplinary backgrounds provide expertise.	1.0
+phimosis	Phimosises are abnormalities.	1.0
+goony	A goony is an oceanic bird	1.0
+diurnal animal	Diurnal animals are active during the day.	0.8286927938461304
+earpiece	An earpiece is a transducer	1.0

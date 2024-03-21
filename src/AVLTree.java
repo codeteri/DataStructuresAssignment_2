@@ -1,121 +1,134 @@
-// Hussein's AVL Tree
-// 2 April 2017
-// Hussein Suleman
-// reference: kukuruku.co/post/avl-trees/
+public class AVLTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType> {
+   // Instance variables to track comparison operations
+   private int insertComparisonCount = 0;
+   private int searchComparisonCount = 0;
 
-public class AVLTree<dataType extends Comparable<? super dataType>> extends BinaryTree<dataType>
-{
-   public int height ( BinaryTreeNode<dataType> node )
-   {
+   // Getter methods to access comparison counts
+   public int getInsertComparisonCount() {
+      return insertComparisonCount;
+   }
+
+   public int getSearchComparisonCount() {
+      return searchComparisonCount;
+   }
+
+   // Method to reset comparison counts
+   public void resetComparisonCounts() {
+      insertComparisonCount = 0;
+      searchComparisonCount = 0;
+   }
+
+   // Method to calculate the height of a node
+   public int height(BinaryTreeNode<dataType> node) {
       if (node != null)
          return node.height;
       return -1;
    }
-   
-   public int balanceFactor ( BinaryTreeNode<dataType> node )
-   {
-      return height (node.right) - height (node.left);
+
+   // Method to calculate the balance factor of a node
+   public int balanceFactor(BinaryTreeNode<dataType> node) {
+      return height(node.right) - height(node.left);
    }
-   
-   public void fixHeight ( BinaryTreeNode<dataType> node )
-   {
-      node.height = Math.max (height (node.left), height (node.right)) + 1;
+
+   // Method to update the height of a node
+   public void fixHeight(BinaryTreeNode<dataType> node) {
+      node.height = Math.max(height(node.left), height(node.right)) + 1;
    }
-   
-   public BinaryTreeNode<dataType> rotateRight ( BinaryTreeNode<dataType> p )
-   {
+
+   // Method to perform a right rotation at a node
+   public BinaryTreeNode<dataType> rotateRight(BinaryTreeNode<dataType> p) {
       BinaryTreeNode<dataType> q = p.left;
       p.left = q.right;
       q.right = p;
-      fixHeight (p);
-      fixHeight (q);
+      fixHeight(p);
+      fixHeight(q);
       return q;
    }
 
-   public BinaryTreeNode<dataType> rotateLeft ( BinaryTreeNode<dataType> q )
-   {
+   // Method to perform a left rotation at a node
+   public BinaryTreeNode<dataType> rotateLeft(BinaryTreeNode<dataType> q) {
       BinaryTreeNode<dataType> p = q.right;
       q.right = p.left;
       p.left = q;
-      fixHeight (q);
-      fixHeight (p);
+      fixHeight(q);
+      fixHeight(p);
       return p;
    }
-   
-   public BinaryTreeNode<dataType> balance ( BinaryTreeNode<dataType> p )
-   {
-      fixHeight (p);
-      if (balanceFactor (p) == 2)
-      {
-         if (balanceFactor (p.right) < 0)
-            p.right = rotateRight (p.right);
-         return rotateLeft (p);
+
+   // Method to balance a node in the AVL tree
+   public BinaryTreeNode<dataType> balance(BinaryTreeNode<dataType> p) {
+      fixHeight(p);
+      if (balanceFactor(p) == 2) {
+         if (balanceFactor(p.right) < 0)
+            p.right = rotateRight(p.right);
+         return rotateLeft(p);
       }
-      if (balanceFactor (p) == -2)
-      {
-         if (balanceFactor (p.left) > 0)
-            p.left = rotateLeft (p.left);
-         return rotateRight (p);
+      if (balanceFactor(p) == -2) {
+         if (balanceFactor(p.left) > 0)
+            p.left = rotateLeft(p.left);
+         return rotateRight(p);
       }
       return p;
    }
 
-   public void insert ( dataType d )
-   {
-      root = insert (d, root);
+   // Method to insert a node into the AVL tree
+   public void insert(dataType d) {
+      root = insert(d, root);
    }
-   public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )
-   {
+
+   private BinaryTreeNode<dataType> insert(dataType d, BinaryTreeNode<dataType> node) {
       if (node == null)
-         return new BinaryTreeNode<dataType> (d, null, null);
-      if (d.compareTo (node.data) <= 0)
-         node.left = insert (d, node.left);
+         return new BinaryTreeNode<dataType>(d, null, null);
+      if (d.compareTo(node.data) <= 0)
+         node.left = insert(d, node.left);
       else
-         node.right = insert (d, node.right);
-      return balance (node);
+         node.right = insert(d, node.right);
+      insertComparisonCount++; // Increment comparison count
+      return balance(node);
    }
-   
-   public void delete ( dataType d )
-   {
-      root = delete (d, root);
-   }   
-   public BinaryTreeNode<dataType> delete ( dataType d, BinaryTreeNode<dataType> node )
-   {
-      if (node == null) return null;
-      if (d.compareTo (node.data) < 0)
-         node.left = delete (d, node.left);
-      else if (d.compareTo (node.data) > 0)
-         node.right = delete (d, node.right);
-      else
-      {
+
+   // Method to delete a node from the AVL tree
+   public void delete(dataType d) {
+      root = delete(d, root);
+   }
+
+   private BinaryTreeNode<dataType> delete(dataType d, BinaryTreeNode<dataType> node) {
+      if (node == null)
+         return null;
+      if (d.compareTo(node.data) < 0)
+         node.left = delete(d, node.left);
+      else if (d.compareTo(node.data) > 0)
+         node.right = delete(d, node.right);
+      else {
          BinaryTreeNode<dataType> q = node.left;
          BinaryTreeNode<dataType> r = node.right;
          if (r == null)
             return q;
-         BinaryTreeNode<dataType> min = findMin (r);
-         min.right = removeMin (r);
+         BinaryTreeNode<dataType> min = findMin(r);
+         min.right = removeMin(r);
          min.left = q;
-         return balance (min);
+         return balance(min);
       }
-      return balance (node);
+      return balance(node);
    }
-   
-   public BinaryTreeNode<dataType> findMin ( BinaryTreeNode<dataType> node )
-   {
+
+   // Method to find the minimum node in the AVL tree
+   public BinaryTreeNode<dataType> findMin(BinaryTreeNode<dataType> node) {
       if (node.left != null)
-         return findMin (node.left);
+         return findMin(node.left);
       else
          return node;
    }
 
-   public BinaryTreeNode<dataType> removeMin ( BinaryTreeNode<dataType> node )
-   {
+   // Method to remove the minimum node from the AVL tree
+   public BinaryTreeNode<dataType> removeMin(BinaryTreeNode<dataType> node) {
       if (node.left == null)
          return node.right;
-      node.left = removeMin (node.left);
-      return balance (node);
+      node.left = removeMin(node.left);
+      return balance(node);
    }
 
+   // Method to search for a node in the AVL tree
    public BinaryTreeNode<dataType> find(dataType d) {
       if (root == null)
          return null;
@@ -123,29 +136,30 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
          return find(d, root);
    }
 
-   public BinaryTreeNode<dataType> find(dataType d, BinaryTreeNode<dataType> node) {
-      if (d.compareTo(node.data) == 0)
+   private BinaryTreeNode<dataType> find(dataType d, BinaryTreeNode<dataType> node) {
+      if (node == null || d.compareTo(node.data) == 0) {
+         searchComparisonCount++; // Increment comparison count
          return node;
-      else if (d.compareTo(node.data) < 0)
-         return (node.left == null) ? null : find(d, node.left);
+      }
+      searchComparisonCount++; // Increment comparison count
+      if (d.compareTo(node.data) < 0)
+         return find(d, node.left);
       else
-         return (node.right == null) ? null : find(d, node.right);
-}
-
-   public void treeOrder ()
-   {
-      treeOrder (root, 0);
+         return find(d, node.right);
    }
-   public void treeOrder ( BinaryTreeNode<dataType> node, int level )
-   {
-      if (node != null)
-      {
-         for ( int i=0; i<level; i++ )
-            System.out.print (" ");
-         System.out.println (node.data);
-         treeOrder (node.left, level+1);
-         treeOrder (node.right, level+1);
+
+   // Method to perform an in-order traversal of the AVL tree
+   public void treeOrder() {
+      treeOrder(root, 0);
+   }
+
+   private void treeOrder(BinaryTreeNode<dataType> node, int level) {
+      if (node != null) {
+         for (int i = 0; i < level; i++)
+            System.out.print(" ");
+         System.out.println(node.data);
+         treeOrder(node.left, level + 1);
+         treeOrder(node.right, level + 1);
       }
    }
 }
-
