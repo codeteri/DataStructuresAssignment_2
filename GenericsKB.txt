@@ -49028,7 +49028,6 @@ shred aspen	Shred aspen has appearances.	1.0
 social status	Social status is status	1.0
 disappearance	Disappearances are departures.	1.0
 claim form	A claim form is a form	1.0
-stock company	A stock company is a theater company	1.0
 proteolysis	Proteolysis is suppressed during periods of oxidative stress.	0.7624448537826538
 kwela	A kwela is dance music	1.0
 many diverse technique	Many diverse techniques cover aspects.	1.0

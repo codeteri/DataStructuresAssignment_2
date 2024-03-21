@@ -84,10 +84,6 @@ public class Statement implements Comparable<Statement> {
 
     @Override
     public String toString() {
-        return "Statement {" +
-                "term: " + term +
-                ", sentence:" + sentence +
-                " , confidenceScore:" + confidenceScore +
-                '}';
+        return term + ": " + sentence + " ("+ confidenceScore + ")";
     }
 }
