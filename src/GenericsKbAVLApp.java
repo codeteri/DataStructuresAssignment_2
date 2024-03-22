@@ -5,18 +5,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-// Welcome to the GenericsKbAVLApp - your tool for storing and retrieving knowledge efficiently!
+/**
+ * Welcome to the GenericsKbAVLApp - your tool for storing and retrieving knowledge efficiently!
+ * This application demonstrates the usage of an AVL binary search tree data structure to store
+ * and retrieve data items consisting of a term (used as the key), sentence, and confidence score.
+ */
+
 public class GenericsKbAVLApp {
-    
-    // Main method - where the magic begins
+    /**
+     * Main method - where the application begins execution.(where the magic happens)
+     * Initializes AVL tree, loads dataset, performs queries, and runs experiments.
+     *
+     * @param args Command-line arguments (not used)
+     */
+
     public static void main(String[] args) {
         // Initialize AVL tree to store our knowledge
         AVLTree<Statement> avlTree = new AVLTree<>();
         // Load dataset and perform queries
         loadDataset(avlTree, "GenericsKB.txt");
-        // performQueries(avlTree, "test_queries.txt");
+        performQueries(avlTree, "test_queries.txt");
 
-        // Experiment 1: Define dataset sizes to test
+        // Experiment : Define dataset sizes to test
         int[] datasetSizes = {10, 100, 1000, 10000, 100000};
 
         // Run experiment for each dataset size
@@ -27,7 +37,14 @@ public class GenericsKbAVLApp {
         }
     }
 
-    // Method to load dataset into AVL tree
+    /**
+     * Method to load dataset into AVL tree.
+     * Each line of the dataset should be in the format: term\tsentence\tconfidenceScore
+     *
+     * @param avlTree  AVL tree instance to store the data items
+     * @param filename Name of the file containing the dataset
+     */
+
     private static void loadDataset(AVLTree<Statement> avlTree, String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -41,6 +58,13 @@ public class GenericsKbAVLApp {
         }
     }
 
+    /**
+     * Method to run experiments with varying dataset sizes.
+     * Inserts random terms into the AVL tree and measures comparison counts for insert and search operations.
+     *
+     * @param avlTree    AVL tree instance for the experiment
+     * @param datasetSize Size of the dataset to be generated and tested
+     */
     private static void runExperiment(AVLTree<Statement> avlTree, int datasetSize) {
         // Initialize variables to store comparison counts
         int minInsertComparisonCount = Integer.MAX_VALUE;
@@ -129,7 +153,14 @@ public class GenericsKbAVLApp {
         }
     }
 
-    // Method to perform queries on the loaded dataset
+    /**
+     * Method to perform queries on the loaded dataset.
+     * Reads query terms from a file and searches for each term in the AVL tree.
+     *
+     * @param avlTree  AVL tree instance containing the dataset
+     * @param filename Name of the file containing the query terms
+     */
+
     private static void performQueries(AVLTree<Statement> avlTree, String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;

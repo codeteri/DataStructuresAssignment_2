@@ -23,3 +23,7 @@ clean:
 # Run the GenericsKbAVLApp class
 run_avl: bin/GenericsKbAVLApp.class
 	java -cp bin GenericsKbAVLApp
+
+# Run the timeComplexityGraph.py script
+run_graph:
+	python3 src/timeComplexityGraph.py
